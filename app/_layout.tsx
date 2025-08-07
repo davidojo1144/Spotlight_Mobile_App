@@ -12,6 +12,12 @@ function RootLayoutNav() {
   )
 }
 
+const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY
+
+if (!publishableKey) {
+  throw new Error("Missing publishable key")
+}
+
 export default function RootLayout() {
   return ( 
     <SafeAreaProvider>
