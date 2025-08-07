@@ -7,7 +7,10 @@ export default function Tablayout() {
   return (
     <Tabs
     screenOptions={{
-      tabBarShowLabel: false
+      tabBarShowLabel: false,
+      headerShown: false,
+      tabBarActiveTintColor: COLORS.primary,
+      tabBarInactiveTintColor: COLORS.grey
     }}>
       <Tabs.Screen 
       name="index"
@@ -22,7 +25,7 @@ export default function Tablayout() {
       <Tabs.Screen 
       name="Create"
        options={{
-        tabBarIcon: ({size, color}) => <Ionicons name="send" size={size} color={COLORS.primary}/>
+        tabBarIcon: ({size, color}) => <Ionicons name="add-circle" size={size} color={color}/>
       }}/> 
       <Tabs.Screen 
       name="Notifications"
